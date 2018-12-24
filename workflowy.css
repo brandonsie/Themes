@@ -1,0 +1,98 @@
+/* Global Text */
+.content
+{
+font-family: "Helvetica";
+font-size: 1em;
+}
+  
+/* Shorter Rows */
+.selected>.children>.project>.children .project>.name>.content
+{
+padding-top: 0px;
+}
+  
+/* Custom Tag Coloring */
+[title~="#p1"]			{color: #ff5454 !important;}
+[title~="#p2"]			{color: #ffa459 !important;}
+[title~="#p3"]			{color: #ffe959 !important;}
+[title~="#work"]		{color: #59d9ff !important;}
+[title~="#prog"]		{color: #5785f9 !important;}
+[title~="#haus"]		{color: #82e278 !important;}
+[title~="#grad"]		{color: #c7e277 !important;}
+[title~="#financial"]	{color: #37bd02 !important;}
+[title~="#shop"]		{color: #66ff56 !important;}
+.content .contentMatch	{background-color: #6d6b61 !important;}
+
+/* Dark Theme */
+
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.page {
+    background-color: #000;
+    border: 1px solid #000;
+    
+}
+
+#header {
+    background: #000;
+}
+
+.project.open.highlighted {
+    background-color: #000;
+}
+
+.project.highlighted::before {
+    background: #3D3D3D;
+}
+
+#documentView {
+    color: #d8d8d8;
+}
+
+.children {
+    border-left: 1px dashed #999;
+}
+
+.bullet circle {
+    color: #f2f2f2;
+}
+
+/* Nested Shading */
+
+/*  First-Level */
+.selected>.children>.project.open
+{
+background:  rgba(106, 106, 106, .1) !important;
+border-top: 1px solid #aaa;
+}
+
+.selected>.children>.project.open>.name
+{
+font-weight: bold;
+}
+
+/* Sub-Level (lighter) */
+.selected>.children>.project.open .project.open
+{
+background: rgba(74, 93, 185, .25) !important;
+border-top: 1px solid #4d4d4d;
+}
+
+
+/* Larger Indented Notes */
+.notes .content
+{
+margin-left: 1.5em;
+color: #444 !important;
+font-size: 0.7em;
+padding-left: 5px;
+}
+
+
+
+
+
+
