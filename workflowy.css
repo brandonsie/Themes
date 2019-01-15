@@ -1,43 +1,39 @@
-/* Global Text */
-.content
-{
-font-family: "Helvetica";
-font-size: 1em;
-}
-  
-/* Shorter Rows */
-.selected>.children>.project>.children .project>.name>.content
-{
-padding-top: 0px;
-}
-  
-/* Custom Tag Coloring */
-[title~="#p1"]			{color: #ff5454 !important;}
-[title~="#p2"]			{color: #ffa459 !important;}
-[title~="#p3"]			{color: #ffe959 !important;}
-[title~="#work"]		{color: #59d9ff !important;}
-[title~="#prog"]		{color: #5785f9 !important;}
-[title~="#haus"]		{color: #82e278 !important;}
-[title~="#grad"]		{color: #c7e277 !important;}
-[title~="#financial"]	{color: #37bd02 !important;}
-[title~="#shop"]		{color: #66ff56 !important;}
-.content .contentMatch	{background-color: #6d6b61 !important;}
+/* tags */
+[title~="#p1"] {color: #ff5454 !important; }
+[title~="#p2"] {color: #ffa459 !important;}
+[title~="#p3"] {color: #ffe959 !important;}
+[title~="#work"] {color: #59d9ff !important;}
+[title~="#prog"] {color: #5785f9 !important;}
+[title~="#haus"] {color: #82e278 !important;}
+[title~="#grad"] {color: #c7e277 !important;}
+[title~="#financial"] {color: #37bd02 !important;}
+[title~="#shop"] {color: #66ff56 !important;}
 
-/* Dark Theme */
+/* text */
+.content {font-family: "Helvetica"; font-size: 1em; color: #d5cece;}
 
+
+/* main page background */ 
 body {
-    background-color: #1c1c1c;
-    color: #fff;
-}
-
-.page {
-    background-color: #000;
-    border: 1px solid #000;
+    /*background-color: #424141; /* #1c1c1c */
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0,0,0,.5)), 
+        url("http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
     
+    /* bg images
+    Baltimore http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg
+    Grand Teton https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg"
+    
+    */
 }
 
-#header {
-    background: #000;
+/* sub page background */
+.page {
+    /*background-color: #424141; /* #000 */     
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));/* #000 */ 
 }
 
 .project.open.highlighted {
@@ -56,43 +52,41 @@ body {
     border-left: 1px dashed #999;
 }
 
-.bullet circle {
-    color: #f2f2f2;
-}
-
-/* Nested Shading */
-
-/*  First-Level */
-.selected>.children>.project.open
+.bullet circle
 {
-background:  rgba(106, 106, 106, .1) !important;
-border-top: 1px solid #aaa;
-}
-
-.selected>.children>.project.open>.name
-{
-font-weight: bold;
-}
-
-/* Sub-Level (lighter) */
-.selected>.children>.project.open .project.open
-{
-background: rgba(74, 93, 185, .25) !important;
-border-top: 1px solid #4d4d4d;
-}
-
-
-/* Larger Indented Notes */
-.notes .content
-{
-margin-left: 1.5em;
-color: #444 !important;
-font-size: 0.7em;
-padding-left: 5px;
+    color: #dbdce1;
 }
 
 
 
+/* tier colors */
 
+/*  Select all first-level projects.
+	"Projects" are items that have chidlren
+*/
+  .selected>.children>.project.open
+  {
+    /*background: linear-gradient(rgba(0, 0, 0, .3), rgba(0,0,0,.3)) !important;/* #000 */ 
+
+    /*background:  rgba(240, 240, 240, .1) !important; /* rgba(106, 106, 106, .1)  */
+    border-top: 1px solid #aaa;
+  }
+
+  .selected>.children>.project.open>.name
+  {
+    font-weight: bold;
+  }
+
+/* Lighten sub-project background */
+  .selected>.children>.project.open .project.open
+  {
+    /* background: rgba(6, 6, 6, .25) !important; /* rgba(74, 93, 185, .25) */ 
+    border: 1px solid #4d4d4d;
+
+    /* border-radius: 8px; */
+  }
+
+/* compact rows */
+.selected>.children>.project>.children .project>.name>.content {padding-top: 0px;}
 
 
