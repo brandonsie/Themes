@@ -1,0 +1,85 @@
+/* ==UserStyle==
+@name           Dynalist
+@namespace      github.com/brandonsie/themes
+@version        1.0.0
+@description    Dynalist custom CSS
+@author         Brandon Sie
+==/UserStyle== */
+
+@-moz-document domain("dynalist.io") {
+
+
+/* ======================================== */
+/* Page & Background */
+
+/* Background Image */
+.AppContainer {
+    /*background: #1e2022 !important;*/
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0,0,0,.5)), 
+    url("http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important; 
+    background-size: cover !important;
+}
+
+/* Document Color & Transparency */ 
+.is-desktop .AppContainer.is-borderShowing .Document {
+    border-color: #444;
+    background: linear-gradient(rgba(35, 40, 47, .8), rgba(35, 40, 47, .4)) !important; 
+}
+
+/* Document Tools Color */ 
+.DocumentTools-overlay {
+    background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !important; 
+    box-shadow: 0 0 3px 3px #23282f;
+}
+    
+/* ======================================== */
+/* Sidebar */
+
+/* Selected Sidebar Item */
+.is-desktop .LeftPaneContainer-navItem.is-active,
+.is-desktop .LeftPaneContainer-navItem:hover {
+/*background: #293039 !important;*/
+background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !important; 
+
+}
+
+/* Sidebar Pane Color */ 
+.Pane {
+/* background-color: #23282f !important;
+*/
+background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !important; 
+
+}
+
+
+/* ======================================== */
+/* Document Contents */
+    
+/* Custom Tag Colors */
+a[title="Filter #p1"]::before {
+  visibility: visible;
+  border-left: solid red;
+  float:left;
+  height:14px;
+  margin-top:2px;
+  content: " ";
+}
+a[title="Filter #p2"]::before {
+  visibility: visible;
+  border-left: solid #ffb300;
+  float:left;
+  height:14px;
+  margin-top:2px;
+  content: " ";
+}
+
+/* Color Collapsed Bullets */
+.is-collapsed>.Node-bullet:before {
+ 	color:#6191d5;   
+}
+
+
+} /* end style */
