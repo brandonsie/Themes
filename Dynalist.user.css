@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist
 @namespace      github.com/brandonsie/themes
-@version        1.0.1
+@version        1.0.02
 @description    Dynalist custom CSS
 @author         Brandon Sie
 @updateurl      https://github.com/brandonsie/Themes/blob/master/Dynalist.user.css
@@ -16,7 +16,7 @@
 /* Background Image */
 .AppContainer {
     /*background: #1e2022 !important;*/
-    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0,0,0,.5)), 
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
     url("http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg") !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
