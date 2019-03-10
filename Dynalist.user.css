@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist
 @namespace      github.com/brandonsie/themes
-@version        1.0.3
+@version        1.0.4
 @description    Dynalist custom CSS
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist.user.css
@@ -47,12 +47,13 @@ background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !importa
 
 }
 
-/* Sidebar Pane Color */ 
+/* Sidebar Pane Color & Transparency */ 
 .Pane {
-/* background-color: #23282f !important;
-*/
-background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !important; 
+    background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !important; 
+}
 
+.LeftPaneContainer{
+    background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !important; 
 }
 
 
