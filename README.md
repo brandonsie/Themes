@@ -1,6 +1,6 @@
 # Themes
 
-Custom CSS etc. for various websites 
-Thanks & credit to:
-https://github.com/openstyles/stylus
-https://github.com/openstyles/stylus/wiki/Usercss
+Custom CSS etc. for various websites & software.
+
+Thanks & credit to [Stylus](https://github.com/openstyles/stylus) and [UserCSS](https://github.com/openstyles/stylus/wiki/Usercss).  
+
