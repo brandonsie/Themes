@@ -12,6 +12,9 @@ Credit for original to Dante Miyamoto https://userstyles.org/styles/143133/pando
 Minor modifications made (probably more changes to come with time)
 */
 
+@-moz-document domain("pandora.com") {
+
+
 div[class*='Nav--scrolled'],
 .SearchResultsList::before,
 .overlay-circle,
@@ -425,3 +428,5 @@ body::before
   {
     filter: grayscale(1) brightness(0.4) !important;
   }
+
+}
