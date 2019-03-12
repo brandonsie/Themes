@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist
 @namespace      github.com/brandonsie/themes
-@version        1.0.4
+@version        1.0.5
 @description    Dynalist custom CSS
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist.user.css
@@ -17,8 +17,11 @@
 .AppContainer {
     /*background: #1e2022 !important;*/
     background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
-    url("http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg") !important;
-    background-repeat: no-repeat !important;
+    url("https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg") !important;
+	/*  grand teton https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg
+		baltimore http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg
+    */
+	background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center !important; 
     background-size: cover !important;
@@ -56,6 +59,26 @@ background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !importa
     background: linear-gradient(rgba(35, 40, 47, .4), rgba(35, 40, 47, .4)) !important; 
 }
 
+/* Fades all the sidebars and icons until you mouse over them */
+
+.LeftPaneSlidebarContainer,
+.LeftPaneSplitter,
+.AppHeader,
+.DocumentTools-icon
+ {
+    opacity: 0.5;
+}
+.LeftPaneSlidebarContainer:hover,
+.LeftPaneSplitter:hover,
+.AppHeader:hover,
+.DocumentTools-icon:hover
+{
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
 
 /* ======================================== */
 /* Document Contents */
@@ -81,6 +104,23 @@ a[title="Filter #p2"]::before {
 /* Color Collapsed Bullets */
 .is-collapsed>.Node-bullet:before {
  	color:#6191d5;   
+}
+
+
+/* higher contrast active item */
+.Node-content:focus,
+.Node-renderedContent:focus,
+.Node-note:focus,
+.Node-renderedNote:focus
+{
+color: #6191d5;
+background: rgba(0, 0, 0, .09);
+}
+
+/* bold titles */
+.Node.is-currentRoot > .Node-self
+{
+font-weight: bold;
 }
 
 
