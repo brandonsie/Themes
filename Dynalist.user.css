@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist
 @namespace      github.com/brandonsie/themes
-@version        1.0.5
+@version        1.0.6
 @description    Dynalist custom CSS
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist.user.css
@@ -13,19 +13,21 @@
 /* ======================================== */
 /* Page & Background */
 
-/* Background Image */
-.AppContainer {
-    /*background: #1e2022 !important;*/
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
-    url("https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg") !important;
-	/*  grand teton https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg
-		baltimore http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg
-    */
-	background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important; 
-    background-size: cover !important;
-}
+/* removed for compatibility with background addon themes
+	/* Background Image 
+	.AppContainer {
+	    /*background: #1e2022 !important;
+	    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
+	    url("https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg") !important;
+		/*  grand teton https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg
+		/*	baltimore http://img.mp.itc.cn/upload/20170509/ddb471a4133f4a4e82f06a5bc16fdc40_th.jpg
+	    
+		background-repeat: no-repeat !important;
+	    background-attachment: fixed !important;
+	    background-position: center !important; 
+	    background-size: cover !important;
+	}
+*/
 
 /* Document Color & Transparency */ 
 .is-desktop .AppContainer.is-borderShowing .Document {
