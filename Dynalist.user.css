@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist
 @namespace      github.com/brandonsie/themes
-@version        1.0.6
+@version        1.0.7
 @description    Dynalist custom CSS
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist.user.css
@@ -107,6 +107,14 @@ a[title="Filter #p2"]::before {
 .is-collapsed>.Node-bullet:before {
  	color:#6191d5;   
 }
+	
+/* custom link size & color */
+a {
+	color: #3daa4c;
+    font-size: 10px;
+    
+}
+
 
 
 /* higher contrast active item */
