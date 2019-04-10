@@ -268,13 +268,13 @@ a {
 /* ======================================== */
 /* Scrollbar */
 ::-webkit-scrollbar {
-background-color: var(--main-black);
+background-color: var(--transparent);
 }
 ::-webkit-scrollbar-thumb {
-background-color: var(--blue-bg);
+background-color: var(--main-blue);
 }
 ::-webkit-scrollbar-thumb:active {
-background-color: var(--light-blue);
+background-color: var(--main-blue);
 }
     
 } /* end style */
