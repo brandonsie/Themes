@@ -1,0 +1,143 @@
+/* ==UserStyle==
+@name           Dynalist_Blue
+@namespace      github.com/brandonsie/themes
+@version        1.0.0
+@description    Dynalist custom CSS
+@author         Brandon Sie
+@updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
+==/UserStyle== */
+
+@-moz-document domain("dynalist.io") {
+
+
+/* ======================================== */
+/* Page & Background */
+
+.AppContainer {
+	    background: linear-gradient(rgb(16, 16, 56), rgb(16, 16, 56)) !important;
+/*   
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), url("https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg") !important;	    
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important; 
+    background-size: cover !important;
+    
+*/
+	}
+
+/* Document Color & Transparency */ 
+.is-desktop .AppContainer.is-borderShowing .Document {
+    border-color: #bfbfbf;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) !important;
+}
+
+/* Document Tools Color */ 
+.DocumentTools-overlay {
+    background: linear-gradient(rgba(200, 200, 200, 1), rgba(200, 200, 200, 1)) !important; 
+    box-shadow: 0 0 1px 1px #23282f;
+}
+    
+/* ======================================== */
+/* Sidebar */
+
+/* Selected Sidebar Item */
+.is-desktop .LeftPaneContainer-navItem.is-active,
+.is-desktop .LeftPaneContainer-navItem:hover {
+/*background: #293039 !important;*/
+background: linear-gradient(rgba(35, 40, 47, 0.4), rgba(35, 40, 47, .4)) !important; 
+
+}
+
+/* Sidebar Pane Color & Transparency */ 
+.Pane {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) !important;
+}
+
+.LeftPaneContainer{
+    background: linear-gradient(rgba(35, 40, 47, 0), rgba(35, 40, 47, 0)) !important; 
+}
+
+    
+/* Fades all the sidebars and icons until you mouse over them */
+/*
+.LeftPaneSlidebarContainer,
+.LeftPaneSplitter,
+.AppHeader,
+.DocumentTools-icon
+ {
+    opacity: 0.5;
+}
+.LeftPaneSlidebarContainer:hover,
+.LeftPaneSplitter:hover,
+.AppHeader:hover,
+.DocumentTools-icon:hover
+{
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+*/
+    
+/* ======================================== */
+/* Document Contents */
+ 
+    
+body { /* Text Color */
+color: #000;
+}
+
+
+
+
+
+/* Custom Tag Colors */
+a[title="Filter #p1"]::before {
+  visibility: visible;
+  border-left: solid red;
+  float:left;
+  height:14px;
+  margin-top:2px;
+  content: " ";
+}
+a[title="Filter #p2"]::before {
+  visibility: visible;
+  border-left: solid #ffb300;
+  float:left;
+  height:14px;
+  margin-top:2px;
+  content: " ";
+}
+
+/* Color Collapsed Bullets */
+.is-collapsed>.Node-bullet:before {
+ 	color:#6191d5;   
+}
+	
+/* custom link size & color */
+a {
+	color: #75ce82;    
+}
+
+
+
+/* higher contrast active item */
+.Node-content:focus,
+.Node-renderedContent:focus,
+.Node-note:focus,
+.Node-renderedNote:focus
+{
+color: #000;
+    
+background: rgba(153, 235, 220, .5);
+}
+
+/* bold titles */
+.Node.is-currentRoot > .Node-self
+{
+font-weight: bold;
+}
+
+
+} /* end style */
