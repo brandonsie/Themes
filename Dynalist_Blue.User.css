@@ -277,14 +277,16 @@ a, .node-inline-item  {
     
 /* ======================================== */
 /* Scrollbar */
+/*
 ::-webkit-scrollbar {
 background-color: var(--transparent);
 }
 ::-webkit-scrollbar-thumb {
-background-color: var(--main-blue);
+background-color: var(--main-black);
 }
 ::-webkit-scrollbar-thumb:active {
 background-color: var(--main-blue);
 }
+*/
     
 } /* end style */
