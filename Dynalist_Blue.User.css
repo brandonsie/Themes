@@ -222,21 +222,16 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
 }
     
 
-a {
-    /* Links */
+a, .node-inline-item  {
+    /* Links & Internal Links */
 	color: var(--main-blue);   
-    
-}
-
-.node-inline-item {
-    /* Internal Links */
     background-color: var(--transparent);
     border: none;
     display: inline;
     vertical-align: middle;
     border-radius: 0px;
     text-decoration: underline;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .node-link-internal.is-displayed:before {
