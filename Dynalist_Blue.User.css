@@ -23,6 +23,7 @@
     --transparent: rgba(0,0,0,0);
     
     --small-text: 10px;
+    --medium-text: 14px;
 }
     
 
@@ -192,7 +193,8 @@ body {
     
 .node-tag {
     /* Tags */
-    color: var(--main-grey);
+	color: var(--main-blue);   
+    font-size: var(--medium-text);
 }
 
 .DocumentContainer.has-tagBackground .node-tag {
@@ -201,21 +203,21 @@ body {
 }
     
 a[title="Filter #p1"]::before, a[title="Filter #P1"]::before {
-    /* Custom Tag Colors */
+    /* Custom Tag Indicator */
     visibility: visible;
     border-left: solid red;
     float:left;
-    height:14px;
+    height: var(--medium-text);
     margin-top:2px;
     content: " ";
 }
     
 a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
-    /* Custom Tag Colors */
+    /* Custom Tag Indicator */
     visibility: visible;
     border-left: solid orange;
     float:left;
-    height:14px;
+    height: var(--medium-text);
     margin-top:2px;
     content: " ";
 }
@@ -246,7 +248,7 @@ a, .node-inline-item  {
     vertical-align: middle;
     border-radius: 0px;
     text-decoration: underline;
-    font-size: 14px;
+    font-size: var(--medium-text);
 }
 
 .node-link-internal.is-displayed:before {
@@ -277,16 +279,14 @@ a, .node-inline-item  {
     
 /* ======================================== */
 /* Scrollbar */
-/*
 ::-webkit-scrollbar {
 background-color: var(--transparent);
 }
 ::-webkit-scrollbar-thumb {
-background-color: var(--main-black);
+background-color: var(--main-blue);
 }
 ::-webkit-scrollbar-thumb:active {
 background-color: var(--main-blue);
 }
-*/
     
 } /* end style */
