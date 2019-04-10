@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/themes
-@version        1.0.1
+@version        1.0.2
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
@@ -17,6 +17,7 @@
     --main-blue: #005f97;
     --page-bg: rgba(255,255,255, 0.5);
     --blue-bg: rgba(0, 95, 151, .5);
+    --yellow-bg: rgba(255, 255, 0, 0.4);
     --light-blue: #00b1ff;
     --transparent: rgba(0,0,0,0);
 }
@@ -168,43 +169,42 @@ body {
     color: var(--main-black);
 }
 
+.search-match {
+    /* ctrl+f search result */
+    background: var(--yellow-bg);
+}
+    
 .node-tag {
     /* Tags */
     color: var(--main-grey);
 }
-    
+
 .DocumentContainer.has-tagBackground .node-tag {
     /* Tag Background */
     background: var(--transparent);
 }
     
-.search-match {
-    /* ctrl+f search result */
-    background: rgba(255, 255, 0, 0.4);
+a[title="Filter #p1"]::before, a[title="Filter #P1"]::before {
+    /* Custom Tag Colors */
+    visibility: visible;
+    border-left: solid red;
+    float:left;
+    height:14px;
+    margin-top:2px;
+    content: " ";
+}
+    
+a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
+    /* Custom Tag Colors */
+    visibility: visible;
+    border-left: solid orange;
+    float:left;
+    height:14px;
+    margin-top:2px;
+    content: " ";
 }
 
 
-/* Custom Tag Colors */
-a[title="Filter #p1"]::before {
-  visibility: visible;
-  border-left: solid red;
-  float:left;
-  height:14px;
-  margin-top:2px;
-  content: " ";
-}
-a[title="Filter #p2"]::before {
-  visibility: visible;
-  border-left: solid #ffb300;
-  float:left;
-  height:14px;
-  margin-top:2px;
-  content: " ";
-}
-
-    
-    
-    
 .Node-bullet:before {
     /* Bullet Points */
     color: var(--main-black);
@@ -227,22 +227,39 @@ a {
     
 }
 
-
-/* higher contrast active item */
-.Node-content:focus,
-.Node-renderedContent:focus,
-.Node-note:focus,
-.Node-renderedNote:focus
-{
-color: #000;
-    
-background: rgba(153, 235, 220, .5);
+.node-inline-item {
+    /* Internal Links */
+    background-color: var(--transparent);
+    border: none;
+    display: inline;
+    vertical-align: middle;
+    border-radius: 0px;
+    text-decoration: underline;
+    font-size: 16px;
 }
 
-/* bold titles */
-.Node.is-currentRoot > .Node-self
-{
-font-weight: bold;
+.node-link-internal.is-displayed:before {
+    /* Hide Internal Link Infinity Icon */
+    content: "";
+}
+
+.node-time{
+    text-decoration: none;
+}
+    
+    
+
+.Node-content:focus,.Node-renderedContent:focus,
+.Node-note:focus,.Node-renderedNote:focus {
+    /* higher contrast active item */
+    color: var(--main-black);
+    background: var(--blue-bg);
+}
+
+
+.Node.is-currentRoot > .Node-self {
+    /* Bold Titles */
+    font-weight: bold;
 }
 
 
@@ -250,15 +267,13 @@ font-weight: bold;
 /* ======================================== */
 /* Scrollbar */
 ::-webkit-scrollbar {
-background-color: rgb(0, 0, 0);
+background-color: var(--main-black);
 }
 ::-webkit-scrollbar-thumb {
-background-color: rgba(49, 114, 168, .5);
+background-color: var(--blue-bg);
 }
 ::-webkit-scrollbar-thumb:active {
-background-color: rgba(0, 224, 255, .3);
+background-color: var(--light-blue);
 }
-    
-    
     
 } /* end style */
