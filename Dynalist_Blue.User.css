@@ -1,60 +1,139 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/themes
-@version        1.0.0
-@description    Dynalist custom CSS
+@version        1.0.1
+@description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
 ==/UserStyle== */
 
 @-moz-document domain("dynalist.io") {
 
+/* ======================================== */
+/* Variables */
+:root {
+    --main-black: #000000;
+    --main-grey: #8e9aa4;
+    --main-blue: #005f97;
+    --page-bg: rgba(255,255,255, 0.5);
+    --blue-bg: rgba(0, 95, 151, .5);
+    --light-blue: #00b1ff;
+    --transparent: rgba(0,0,0,0);
+}
+    
 
+/* ======================================== */
+/* Header & Borders */
+.AppHeader {
+    color: var(--main-black);
+    background-color: var(--main-grey);
+    box-shadow: 0 1px 3px var(--main-black);
+}
+
+.AppHeader-icon {
+    color: var(--main-black);
+}
+
+.AppHeader-icon:hover {
+    color: var(--light-blue);
+    border: 1px solid var(--main-black);
+}
+
+    
 /* ======================================== */
 /* Page & Background */
 
+    
+    
 .AppContainer {
-	    background: linear-gradient(rgb(16, 16, 56), rgb(16, 16, 56)) !important;
+    background: linear-gradient(var(--main-grey), var(--main-grey)) !important;
 /*   
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), url("https://raw.githubusercontent.com/brandonsie/brandonsie.github.io/master/docs/grandteton.jpg") !important;	    
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), url("") !important;	    
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center !important; 
     background-size: cover !important;
-    
 */
-	}
+}
 
 /* Document Color & Transparency */ 
 .is-desktop .AppContainer.is-borderShowing .Document {
-    border-color: #bfbfbf;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) !important;
+    border-color: var(--main-black);
+    background: linear-gradient(var(--page-bg), var(--page-bg)) !important;
 }
 
-/* Document Tools Color */ 
-.DocumentTools-overlay {
-    background: linear-gradient(rgba(200, 200, 200, 1), rgba(200, 200, 200, 1)) !important; 
-    box-shadow: 0 0 1px 1px #23282f;
+.DocumentTools-icon {
+    color: var(--main-grey);
 }
+
+.DocumentTools-icon:hover {
+    color: var(--main-black);
+}
+    
+.DocumentTools-overlay {
+    background: linear-gradient(var(--transparent), var(--transparent)) !important; 
+    box-shadow: 0 0 0px 0px var(--main-black);
+}
+    
+
     
 /* ======================================== */
 /* Sidebar */
 
-/* Selected Sidebar Item */
-.is-desktop .LeftPaneContainer-navItem.is-active,
-.is-desktop .LeftPaneContainer-navItem:hover {
-/*background: #293039 !important;*/
-background: linear-gradient(rgba(35, 40, 47, 0.4), rgba(35, 40, 47, .4)) !important; 
-
+.is-desktop .Pane-header,
+.is-desktop .popup-message-banner {
+    /* Header Bar */
+    color: var(--main-black);
+    background: var(--page-bg);
+}
+    
+.is-desktop .Pane-headerToolbarItem {
+    /* Header Icons */
+    color: var(--main-black);
 }
 
-/* Sidebar Pane Color & Transparency */ 
+.is-desktop .Pane-headerToolbarItem:hover {
+    /* Header Icons Hover */
+    color: var(--light-blue);
+}
+
+    
+.is-desktop .LeftPaneSplitter:after {
+    /* Right Edge of Sidebar */
+    border-right: 1px solid var(--main-black);
+}
+
+.is-desktop .LeftPaneContainer-nav {
+    /* Left Column of Sidebar w/ Icons */
+    background: var(--main-grey);
+}
+
+.is-desktop .LeftPaneContainer-navItem.is-active,
+.is-desktop .LeftPaneContainer-navItem:hover { 
+    /* Selected Sidebar Icon */
+    background: var(--page-bg);
+}
+
+.is-desktop .LeftPaneContainer-navItem {
+    /* Non-Selected Sidebar Icon */
+    background: var(--main-grey);
+    color: var(--main-black);
+}
+
 .Pane {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) !important;
+    /* Sidebar Text Pane */
+    background: linear-gradient(var(--page-bg), var(--page-bg)) !important;
 }
 
 .LeftPaneContainer{
-    background: linear-gradient(rgba(35, 40, 47, 0), rgba(35, 40, 47, 0)) !important; 
+    /* Container of Sidebar Text Pane */ 
+    
+    background: linear-gradient(var(--transparent), var(--transparent)) !important; 
+}
+    
+.pane-item.DocumentItem.is-open > .pane-item-header {
+    /* Selected Item in Pane */
+    background-color: var(--blue-bg);
 }
 
     
@@ -84,12 +163,25 @@ background: linear-gradient(rgba(35, 40, 47, 0.4), rgba(35, 40, 47, .4)) !import
 /* Document Contents */
  
     
-body { /* Text Color */
-color: #000;
+body { 
+    /* Main Text */
+    color: var(--main-black);
 }
 
-
-
+.node-tag {
+    /* Tags */
+    color: var(--main-grey);
+}
+    
+.DocumentContainer.has-tagBackground .node-tag {
+    /* Tag Background */
+    background: var(--transparent);
+}
+    
+.search-match {
+    /* ctrl+f search result */
+    background: rgba(255, 255, 0, 0.4);
+}
 
 
 /* Custom Tag Colors */
@@ -110,16 +202,30 @@ a[title="Filter #p2"]::before {
   content: " ";
 }
 
-/* Color Collapsed Bullets */
-.is-collapsed>.Node-bullet:before {
- 	color:#6191d5;   
-}
-	
-/* custom link size & color */
-a {
-	color: #75ce82;    
+    
+    
+    
+.Node-bullet:before {
+    /* Bullet Points */
+    color: var(--main-black);
 }
 
+.is-collapsed>.Node-bullet:before {
+    /* Collapsed Bullets */
+ 	color: var(--main-blue);   
+}
+
+.AppContainer.is-using-bullet-to-zoom .Node-bullet:hover:before {
+    /* Hovered Bullet */
+    background-color: var(--main-grey);
+}
+    
+
+a {
+    /* Links */
+	color: var(--light-blue);   
+    
+}
 
 
 /* higher contrast active item */
@@ -140,4 +246,19 @@ font-weight: bold;
 }
 
 
+    
+/* ======================================== */
+/* Scrollbar */
+::-webkit-scrollbar {
+background-color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+background-color: rgba(49, 114, 168, .5);
+}
+::-webkit-scrollbar-thumb:active {
+background-color: rgba(0, 224, 255, .3);
+}
+    
+    
+    
 } /* end style */
