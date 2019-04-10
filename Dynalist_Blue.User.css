@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/themes
-@version        1.0.3
+@version        1.0.4
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
@@ -21,6 +21,8 @@
     --green-bg: rgba(164, 255, 187, .3);
     --light-blue: #00b1ff;
     --transparent: rgba(0,0,0,0);
+    
+    --small-text: 10px;
 }
     
 
@@ -106,6 +108,7 @@
 }
 
 .is-desktop .LeftPaneContainer-nav {
+    
     /* Left Column of Sidebar w/ Icons */
     background: var(--main-grey);
 }
@@ -120,16 +123,28 @@
     /* Non-Selected Sidebar Icon */
     background: var(--main-grey);
     color: var(--main-black);
+    
 }
 
 .Pane {
     /* Sidebar Text Pane */
     background: linear-gradient(var(--page-bg), var(--page-bg)) !important;
+    font-size: 10px;
+}
+
+.pane-item-icon {
+    /* Folder & Document Pane Icons */
+    color: var(--main-black);
+    font-size: var(--small-text);
+    line-height: var(--small-text);
+}
+
+.pane-item-icon.shared {
+    color: var(--main-blue);
 }
 
 .LeftPaneContainer{
     /* Container of Sidebar Text Pane */ 
-    
     background: linear-gradient(var(--transparent), var(--transparent)) !important; 
 }
     
