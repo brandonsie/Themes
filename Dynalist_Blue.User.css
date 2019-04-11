@@ -17,6 +17,7 @@
     --main-blue: #005f97;
     --page-bg: rgba(255,255,255, 0.5);
     --blue-bg: rgba(0, 95, 151, .5);
+    --blue-hl: rgba(132, 196, 234, .3);
     --yellow-bg: rgba(255, 255, 0, 0.4);
     --green-bg: rgba(164, 255, 187, .3);
     --light-blue: #00b1ff;
@@ -266,7 +267,7 @@ a, .node-inline-item  {
 .Node-note:focus,.Node-renderedNote:focus {
     /* higher contrast active item */
     color: var(--main-black);
-    background: var(--green-bg);
+    background: var(--blue-hl);
 }
 
 
