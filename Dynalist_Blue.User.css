@@ -13,9 +13,9 @@
 /* Variables */
 :root {
     --main-black: #000000;
-    --main-grey: #8e9aa4;
+    --main-grey: rgba(142, 154, 164, 1);
     --main-blue: #005f97;
-    --page-bg: rgba(255,255,255, 0.5);
+    --page-bg: rgba(255,255,255, 0.7);
     --blue-bg: rgba(0, 95, 151, .5);
     --blue-hl: rgba(132, 196, 234, .3);
     --yellow-bg: rgba(255, 255, 0, 0.4);
