@@ -180,10 +180,32 @@
     
 /* ======================================== */
 /* Document Contents */
- 
+
+/*
+.DocumentContainer.is-centerDocument .Document, 
+.DocumentContainer.is-centerDocument .DocumentBreadcrumb {
+    /* Larger Main Document 
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+    
+.Node {
+    /* Body Text */
+	/*
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.5px;
+    font-style: normal;
+	font-weight: lighter;
+    */
+    font-family: "Palatino Linotype", "Times New Roman", serif;
+    font-size: 10px;
+}
+
     
 body { 
-    /* Main Text */
+    /* Main Body */
     color: var(--main-black);
 }
 
@@ -202,6 +224,7 @@ body {
     /* Tag Background */
     background: var(--transparent);
 }
+
     
 a[title="Filter #p1"]::before, a[title="Filter #P1"]::before {
     /* Custom Tag Indicator */
@@ -209,7 +232,8 @@ a[title="Filter #p1"]::before, a[title="Filter #P1"]::before {
     border-left: solid red;
     float:left;
     height: var(--medium-text);
-    margin-top:2px;
+    margin-top: 4px;
+    font-size: var(--medium-text)x;
     content: " ";
 }
     
@@ -219,7 +243,8 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
     border-left: solid orange;
     float:left;
     height: var(--medium-text);
-    margin-top:2px;
+    margin-top: 4px;
+    font-size: var(--medium-text);
     content: " ";
 }
 
@@ -227,6 +252,7 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
 .Node-bullet:before {
     /* Bullet Points */
     color: var(--main-black);
+    font-size: 13px;
 }
 
 .is-collapsed>.Node-bullet:before {
