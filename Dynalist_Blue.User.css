@@ -233,7 +233,7 @@ a[title="Filter #p1"]::before, a[title="Filter #P1"]::before {
     float:left;
     height: var(--medium-text);
     margin-top: 4px;
-    font-size: var(--medium-text)x;
+    font-size: var(--medium-text);
     content: " ";
 }
     
