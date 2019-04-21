@@ -217,6 +217,7 @@
       */
   }
 
+
     
 body { 
     /* Main Body */
@@ -312,22 +313,25 @@ a, .node-inline-item  {
 
 
 .Node.is-currentRoot > .Node-self {
-    /* Bold Titles */
+    /* Page Titles */
     font-weight: bold;
+    text-align: center;
 }
 
-
+    
     
 /* ======================================== */
 /* Scrollbar */
+    /*
 ::-webkit-scrollbar {
-background-color: var(--transparent);
+    background-color: var(--transparent);
 }
 ::-webkit-scrollbar-thumb {
-background-color: var(--main-blue);
+    background-color: var(--main-blue);
 }
 ::-webkit-scrollbar-thumb:active {
-background-color: var(--main-blue);
+    background-color: var(--main-blue);
 }
+    */
     
 } /* end style */
