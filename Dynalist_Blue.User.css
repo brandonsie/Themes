@@ -13,7 +13,7 @@
 /* Variables */
 :root {
     --main-black: #000000;
-    --main-grey: rgba(142, 154, 164, 1);
+    --main-grey: rgba(120, 120, 120, .3);
     --main-blue: #005f97;
     --page-bg: rgba(255,255,255, 0.7);
     --blue-bg: rgba(0, 95, 151, .5);
@@ -31,13 +31,13 @@
 /* ======================================== */
 /* Header & Borders */
 .AppHeader {
-    color: var(--main-black);
-    background-color: var(--main-grey);
+    color: var(--main-blue);
+    background-color: var(--transparent);
     box-shadow: 0 1px 3px var(--main-black);
 }
 
 .AppHeader-icon {
-    color: var(--main-black);
+    color: var(--main-blue);
 }
 
 .AppHeader-icon:hover {
@@ -124,8 +124,7 @@
 .is-desktop .LeftPaneContainer-navItem {
     /* Non-Selected Sidebar Icon */
     background: var(--main-grey);
-    color: var(--main-black);
-    
+    color: var(--main-black);    
 }
 
 .Pane {
@@ -139,6 +138,7 @@
     color: var(--main-black);
     font-size: var(--small-text);
     line-height: var(--small-text);
+    margin-left: -25px;
 }
 
 .pane-item-icon.shared {
