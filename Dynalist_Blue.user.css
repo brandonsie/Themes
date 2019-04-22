@@ -4,7 +4,7 @@
 @version        1.0.5
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
-@updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
+@updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.User.css
 ==/UserStyle== */
 
 @-moz-document domain("dynalist.io") {
@@ -14,6 +14,7 @@
 :root {
     --main-black: #000000;
     --main-grey: rgba(120, 120, 120, .3);
+    --dark-grey: rgba(75, 75, 75, 1);
     --thick-grey: rgba(250, 250, 250, 0.9);
     --main-blue: #005f97;
     --page-bg: rgba(255,255,255, 0.7);
@@ -324,16 +325,19 @@ a, .node-inline-item  {
 }
     
     
-.popover , .node-mover-title, .is-checked span, .is-checked {
+.popover > .node-mover-title, .Suggestions-item span, .is-checked .node-bold span {
     /* Move Item Menu Text */
     color: var(--main-blue);
     text-decoration-line: none !important;
 }
-    .popover{
-        background-color: var(--thick-grey);
+.popover{
+    background-color: var(--thick-grey);
+}
+
+    .is-checked span {
+        /* Completed Items */
+        color: var(--dark-grey);
     }
-
-
     
 .AppContainer{
     background: var(--app-bg) !important;
