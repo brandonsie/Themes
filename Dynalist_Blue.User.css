@@ -114,7 +114,7 @@
 .is-desktop .LeftPaneContainer-nav {
     
     /* Left Column of Sidebar w/ Icons */
-    background: var(--main-grey);
+    background: var(--transparent);
 }
 
 .is-desktop .LeftPaneContainer-navItem.is-active,
