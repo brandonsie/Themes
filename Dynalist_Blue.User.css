@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.4
+@version        1.0.5
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.User.css
@@ -14,6 +14,7 @@
 :root {
     --main-black: #000000;
     --main-grey: rgba(120, 120, 120, .3);
+    --thick-grey: rgba(250, 250, 250, 0.9);
     --main-blue: #005f97;
     --page-bg: rgba(255,255,255, 0.7);
     --blue-bg: rgba(0, 95, 151, .5);
@@ -26,7 +27,8 @@
     --small-text: 10px;
     --medium-text: 14px;
 }
-    
+
+
 
 /* ======================================== */
 /* Header & Borders */
@@ -317,6 +319,16 @@ a, .node-inline-item  {
     font-weight: bold;
     text-align: center;
 }
+    
+    
+.popover , .node-mover-title, .is-checked span, .is-checked {
+    /* Move Item Menu Text */
+    color: var(--main-blue);
+    text-decoration-line: none !important;
+}
+    .popover{
+        background-color: var(--thick-grey);
+    }
 
     
     
