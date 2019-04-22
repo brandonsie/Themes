@@ -339,6 +339,11 @@ a, .node-inline-item  {
         color: var(--dark-grey);
     }
     
+    .is-checked .needsclick{
+        /* Edit-Mode clicked items */
+        color: var(--main-black) !important;
+    }
+    
 .AppContainer{
     background: var(--app-bg) !important;
     background-repeat: no-repeat !important;
