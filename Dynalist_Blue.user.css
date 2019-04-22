@@ -4,7 +4,7 @@
 @version        1.0.5
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
-@updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.User.css
+@updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
 ==/UserStyle== */
 
 @-moz-document domain("dynalist.io") {
@@ -26,6 +26,9 @@
     
     --small-text: 10px;
     --medium-text: 14px;
+    
+    --app-bg: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
+        url("https://images3.alphacoders.com/781/781047.jpg")
 }
 
 
@@ -330,7 +333,16 @@ a, .node-inline-item  {
         background-color: var(--thick-grey);
     }
 
+
     
+.AppContainer{
+    background: var(--app-bg) !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: fill !important; 
+    background-size: cover !important;
+
+}
     
 /* ======================================== */
 /* Scrollbar */
