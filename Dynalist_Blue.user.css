@@ -4,7 +4,7 @@
 @version        1.0.5
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
-@updateURL	https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
+@updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
 ==/UserStyle== */
 
 @-moz-document domain("dynalist.io") {
@@ -69,7 +69,7 @@
 }
 
 /* Document Color & Transparency */ 
-.is-desktop .AppContainer.is-borderShowing .Document {
+.is-desktop .AppContainer.is-borderShowing .Document, .read-only-doc {
     border-color: var(--main-black);
     background: linear-gradient(var(--page-bg), var(--page-bg)) !important;
 }
