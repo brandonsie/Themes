@@ -4,7 +4,6 @@
 @version        1.0.5
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
-@updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
 ==/UserStyle== */
 
 @-moz-document domain("dynalist.io") {
@@ -25,16 +24,17 @@
     --light-blue: #00b1ff;
     --transparent: rgba(0,0,0,0);
     
-    --small-text: 14px;
+    --code-color: #4d68b3;
+    --code-font: "Consolas", "Courier", monospace;
+    --code-bg: rgba(255, 255, 255, .2);
+    
+    --small-text: 10px;
     --medium-text: 14px;
     
     --app-bg: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
         url("")
-
 }
-
-
-
+    
 /* ======================================== */
 /* Header & Borders */
 .AppHeader {
@@ -137,7 +137,7 @@
 .Pane {
     /* Sidebar Text Pane */
     background: linear-gradient(var(--page-bg), var(--page-bg)) !important;
-    font-size: var(--small-text);
+    font-size: 10px;
 }
 
 .pane-item-icon {
@@ -212,11 +212,11 @@
 
   .node-inline-code
   {
-    color: #B35E4D;
-    font-family: "Consolas", "Courier", monospace;
-    background-color: rgba(255, 255, 255, .3);
-    font-size: 12px !important;
+    color: var(--code-color);
+    font-family: var(--code-font);
+    background-color: var(--code-bg);
       /*
+  font-size: 12px !important;
     padding-top: 2px;
     padding-bottom: 1px;
     margin: 0 .1em;
