@@ -30,9 +30,10 @@
     
     --app-bg: 
         linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
-        url("")
+        url("https://images3.alphacoders.com/781/781047.jpg")
         
         rgb(137, 137, 137)
+        
 }
 
 
@@ -353,7 +354,7 @@ a, .node-inline-item  {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center center !important; 
-    background-size: contain !important;
+    background-size: cover !important; /* contain or cover */
 }
     
 /* ======================================== */
