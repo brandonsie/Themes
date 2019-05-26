@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name           Hide Google Calendar Sidebar
+@namespace      github.com/brandonsie/Themes
+@version        0.0.1
+@description    Hide left sidebar in google calendar. Kept as a separate style to toggle on and off.
+@author         Brandon Sie
+==/UserStyle== */
+
+@-moz-document domain("calendar.google.com") {
+    .QQYuzf , .YO50ue , .Jyewjb-haAclf , .LXjtcc{ display:none; }
+}
