@@ -274,7 +274,31 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
     content: " ";
 }
 
+/* Colored Labels */
 
+.set-color-label[data-color="1"], .Node-contentContainer.mod-color-label-1 {
+    /* Colored Label */
+    background-color: #ff8f61;
+}
+.set-color-label[data-color="2"], .Node-contentContainer.mod-color-label-2 {
+    /* Colored Label */
+    background-color: #faff7b;
+}
+.set-color-label[data-color="3"], .Node-contentContainer.mod-color-label-3 {
+    /* Colored Label */
+    background-color: #5cc46f;
+}
+.set-color-label[data-color="4"], .Node-contentContainer.mod-color-label-4 {
+    background-color: rgb(131, 164, 255);
+}
+.set-color-label[data-color="5"], .Node-contentContainer.mod-color-label-5 {
+    /* Colored Label */
+    background-color: rgb(186, 204, 255);
+}
+.set-color-label[data-color="6"], .Node-contentContainer.mod-color-label-6 {
+    /* Colored Label */
+    background-color: rgb(224, 230, 240);
+}
 .Node-bullet:before {
     /* Bullet Points */
     color: var(--main-black);
