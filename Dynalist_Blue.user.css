@@ -17,7 +17,16 @@
     --dark-grey: rgba(75, 75, 75, 1);
     --thick-grey: rgba(250, 250, 250, 0.9);
     --main-blue: #005f97;
-    --page-bg: rgba(255,255,255, 0.7);
+    
+    /*
+    https://images3.alphacoders.com/781/781047.jpg
+    
+    */
+    
+    --page-bg-color: rgba(255,255,255, 0.9);
+    --page-bg-url: url("");
+    --page-bg-style: linear-gradient(var(--page-bg-color), var(--page-bg-color)), var(--page-bg-url) !important;
+
     --blue-bg: rgba(0, 95, 151, .5);
     --blue-hl: rgba(132, 196, 234, .3);
     --yellow-bg: rgba(255, 255, 0, 0.4);
@@ -28,12 +37,11 @@
     --small-text: 14px;
     --medium-text: 14px;
     
-    --app-bg: 
-        linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), 
-        url("https://images3.alphacoders.com/781/781047.jpg")
-        
-        rgb(137, 137, 137)
-        
+    --app-bg-color-1: rgba(0, 0, 0, .8);
+    --app-bg-color-2: rgba(0, 0, 0, .8);
+    --app-bg-url: url("https://brandonsie.github.io/docs/Boston_Bigmap_Crop_Contrast.jpg");
+    --app-bg-style: linear-gradient(var(--app-bg-color-1), var(--app-bg-color-2)), var(--app-bg-url) !important;
+    
 }
 
 
@@ -75,7 +83,7 @@
 /* Document Color & Transparency */ 
 .is-desktop .AppContainer.is-borderShowing .Document, .read-only-doc {
     border-color: var(--main-black);
-    background: linear-gradient(var(--page-bg), var(--page-bg)) !important;
+    background: var(--page-bg-style) !important;
 
 }
 
@@ -101,7 +109,7 @@
 .is-desktop .popup-message-banner {
     /* Header Bar */
     color: var(--main-black);
-    background: var(--page-bg);
+    background: var(--page-bg-color);
 }
     
 .is-desktop .Pane-headerToolbarItem {
@@ -129,7 +137,7 @@
 .is-desktop .LeftPaneContainer-navItem.is-active,
 .is-desktop .LeftPaneContainer-navItem:hover { 
     /* Selected Sidebar Icon */
-    background: var(--page-bg);
+    background: var(--page-bg-color);
 }
 
 .is-desktop .LeftPaneContainer-navItem {
@@ -140,7 +148,7 @@
 
 .Pane {
     /* Sidebar Text Pane */
-    background: linear-gradient(var(--page-bg), var(--page-bg)) !important;
+    background: linear-gradient(var(--page-bg-color), var(--page-bg-color)) !important;
     font-size: var(--small-text);
 }
 
@@ -274,6 +282,7 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
     content: " ";
 }
 
+    
 /* Colored Labels */
 
 .set-color-label[data-color="1"], .Node-contentContainer.mod-color-label-1 {
@@ -301,8 +310,7 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
     /* Colored Label */
     background-color: rgb(224, 230, 240);
 }
-	
-	
+
 .Node-bullet:before {
     /* Bullet Points */
     color: var(--main-black);
@@ -378,7 +386,7 @@ a, .node-inline-item  {
     }
     
 .AppContainer{
-    background: var(--app-bg) !important;
+    background: var(--app-bg-style) !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center center !important; 
