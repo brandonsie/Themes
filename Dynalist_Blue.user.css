@@ -37,8 +37,8 @@
     --small-text: 14px;
     --medium-text: 14px;
     
-    --app-bg-color-1: rgba(0, 0, 0, .8);
-    --app-bg-color-2: rgba(0, 0, 0, .8);
+    --app-bg-color-1: rgba(0, 0, 0, .1);
+    --app-bg-color-2: rgba(0, 0, 0, .1);
     --app-bg-url: url("");
     /* https://brandonsie.github.io/docs/Boston_Bigmap_Crop_Contrast.jpg */
     --app-bg-style: linear-gradient(var(--app-bg-color-1), var(--app-bg-color-2)), var(--app-bg-url) !important;
