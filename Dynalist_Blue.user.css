@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.5
+@version        1.0.6
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
@@ -82,10 +82,10 @@
 }
 
 /* Document Color & Transparency */ 
-.is-desktop .AppContainer.is-borderShowing .Document, .read-only-doc {
+.is-desktop .AppContainer.is-borderShowing .Document, .read-only-doc, .AppContainer.is-borderShowing .Document{
+    background: linear-gradient(var(--page-bg-color), var(--page-bg-color)) !important;
     border-color: var(--main-black);
-    background: var(--page-bg-style) !important;
-
+    min-height: 10px;
 }
 
 .DocumentTools-icon {
@@ -160,7 +160,7 @@
     background: linear-gradient(var(--page-bg-color), var(--page-bg-color)) !important;
     font-size: var(--small-text);
 }
-
+    
 .pane-item-icon {
     /* Folder & Document Pane Icons */
     color: var(--main-black);
