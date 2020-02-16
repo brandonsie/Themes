@@ -92,7 +92,7 @@
 
     --low-contrast-bg: rgba(120, 120, 120, .3); /* sidebar doc bookmarks bg  */
     --passive-select: rgba(0, 95, 151, .5); /* sidebar selection */
-    --active-select: rgba(132, 196, 234, .3);
+    --active-select: rgba(31, 157, 231, .3);
     --search-select: rgba(255, 255, 0, 0.4);
     --transparent: rgba(0,0,0,0);
     --code-bg: rgba(24, 22, 22, .71);
@@ -502,4 +502,3 @@ a, .node-inline-item  {
 
 }
 /* end style */
-	
