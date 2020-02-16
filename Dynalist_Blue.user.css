@@ -16,6 +16,14 @@
 ::-moz-selection {
   background: rgba(0, 55, 102, 0.99);
 }
+    
+    /* sidebar hover selection */ /* check this color in light mode and ctrl f */
+.pane-item-header.hover,
+.pane-item-header.highlighted,
+.TagPane-tags .pane-item-header:hover {
+  color: #eee;
+  background: #003766;
+}
 /* ======================================== */
 /* Variables */
 :root {
@@ -195,6 +203,8 @@
 
 /* Sidebar Text */ .pane-item-title{
     color: var(--low-contrast);
+          position:absolute;
+
 }
 
 /* Selected Sidebar Text */.is-open .pane-item-title{
