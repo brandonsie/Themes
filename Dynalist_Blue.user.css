@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.9
+@version        1.0.10
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://raw.githubusercontent.com/brandonsie/Themes/master/Dynalist_Blue.user.css
@@ -16,6 +16,12 @@
 ::-moz-selection {
   background: rgba(0, 55, 102, 0.99);
 }
+
+    /* move item menu emphasis */
+.Suggestions-item.is-current,
+.Suggestions-dropdownLoadAll:hover {
+  background: var(--main-color);
+    }
     
     /* sidebar hover selection */ /* check this color in light mode and ctrl f */
 .pane-item-header.hover,
@@ -34,6 +40,7 @@
     /* ---------- */
     /* Light Mode */
     /* ---------- */
+    --main-color: #fff;
     --main-contrast: #000000;
     --low-contrast: rgba(75, 75, 75, 1);
     --very-low-contrast: rgba(177, 172, 172, .9);
@@ -75,6 +82,7 @@
 /* Dark Mode  */
 /* ---------- */
 [data-theme="dark"] {
+    --main-color: #000;
     --main-contrast: #fff; /* main text color */
     --low-contrast: rgb(195, 195, 195);
     --very-low-contrast: rgba(118, 116, 116, .9);
@@ -494,3 +502,4 @@ a, .node-inline-item  {
 
 }
 /* end style */
+	
