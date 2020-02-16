@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.8
+@version        1.0.9
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://raw.githubusercontent.com/brandonsie/Themes/master/Dynalist_Blue.user.css
@@ -39,12 +39,14 @@
     --very-low-contrast: rgba(177, 172, 172, .9);
     --link-color: #005f97;
     --emphasis-blue: #00b1ff;
+    --code-color: #B35E4D;
 	
     --low-contrast-bg: rgba(120, 120, 120, .3); 
     --passive-select: rgba(0, 95, 151, .5);
     --active-select: rgba(132, 196, 234, .3);
     --search-select: rgba(255, 255, 0, 0.4);
     --transparent: rgba(0,0,0,0);
+    --code-bg: rgba(255, 255, 255, .3);
     
     /* Document Background */
     --page-bg-color: rgba(255,255,255, 0.9);
@@ -78,13 +80,15 @@
     --very-low-contrast: rgba(118, 116, 116, .9);
     --link-color: #91caec; /* Links */
     --emphasis-blue: #00b1ff; /* Sidebar and App header icons on hover */
+    --code-color: #f7b39e;
 
     --low-contrast-bg: rgba(120, 120, 120, .3); /* sidebar doc bookmarks bg  */
     --passive-select: rgba(0, 95, 151, .5); /* sidebar selection */
     --active-select: rgba(132, 196, 234, .3);
     --search-select: rgba(255, 255, 0, 0.4);
     --transparent: rgba(0,0,0,0);
-    
+    --code-bg: rgba(24, 22, 22, .71);
+
     /* Document Background */
     --page-bg-color: rgba(57, 58, 71, .9);
     --page-bg-url: url("");
@@ -287,9 +291,9 @@
 
   .node-inline-code
   {
-    color: #B35E4D;
+    color: var(--code-color);
     font-family: "Consolas", "Courier", monospace;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: var(--code-bg);
     font-size: 12px !important;
       /*
     padding-top: 2px;
