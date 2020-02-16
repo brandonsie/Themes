@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.7
+@version        1.0.8
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://raw.githubusercontent.com/brandonsie/Themes/master/Dynalist_Blue.user.css
@@ -9,6 +9,13 @@
 
 @-moz-document domain("dynalist.io") {
 
+/* text selection */
+::selection {
+  background: rgba(0, 55, 102, 0.99);
+}
+::-moz-selection {
+  background: rgba(0, 55, 102, 0.99);
+}
 /* ======================================== */
 /* Variables */
 :root {
