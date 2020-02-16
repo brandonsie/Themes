@@ -84,11 +84,11 @@
         var(--app-bg-color-2)), var(--app-bg-url) !important;
     
     /* Ctrl+L Label Colors */
-    --label1: #f88;
-    --label2: #f6f9a6;
-    --label3: #8fc599;
+    --label1: #703939;
+    --label2: #7f823f;
+    --label3: #34673e;
     --label4: rgb(69, 85, 132);
-    --label5: rgb(106, 131, 202);
+    --label5: rgb(111, 126, 166);
     --label6: rgb(85, 87, 92);
 }
 
@@ -171,11 +171,13 @@
 
 /* Selected Sidebar Icon */ .is-desktop .LeftPaneContainer-navItem.is-active,
 .is-desktop .LeftPaneContainer-navItem:hover { 
-    background: var(--page-bg-color);
+    background: var(--transparent);
 }
 
+
+
 /* Non-Selected Sidebar Icon */ .is-desktop .LeftPaneContainer-navItem {
-    background: var(--low-contrast-bg);
+    background: var(--transparent);
     color: var(--main-contrast);    
 }
 
@@ -185,8 +187,12 @@
 }
 
 /* Sidebar Text */ .pane-item-title{
-    color: var(--very-low-contrast);
+    color: var(--low-contrast);
 }
+
+/* Selected Sidebar Text */.is-open .pane-item-title{
+    color: var(--main-contrast);
+}    
     
 /* Folder & Document Pane Icons */ .pane-item-icon {
     color: var(--very-low-contrast);
@@ -276,7 +282,10 @@
       */
   }
 
-
+/* selected text highlight */ /* only works on full nodes in main document currently */
+    .Node-outer .is-selected, .Node .is-selected {
+        background-color: var(--app-bg-color-1);
+    }
     
 body { 
     /* Main Body */
@@ -437,7 +446,7 @@ a, .node-inline-item  {
 .is-currentRoot .Node .Node-children
 {
     /* vertical bars */
-    border-left: 1px solid #000;
+    border-left: 1px solid var(--main-contrast);
 }
     
     
