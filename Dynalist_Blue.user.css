@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.6
+@version        1.0.7
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://github.com/brandonsie/Themes/blob/master/Dynalist_Blue.user.css
@@ -12,96 +12,130 @@
 /* ======================================== */
 /* Variables */
 :root {
-    --main-black: #000000;
-    --main-grey: rgba(120, 120, 120, .3);
-    --dark-grey: rgba(75, 75, 75, 1);
-    --thick-grey: rgba(250, 250, 250, 0.9);
-    --main-blue: #005f97;
-    
-    /*
-    https://images3.alphacoders.com/781/781047.jpg
-    
-    */
-    
-    --page-bg-color: rgba(255,255,255, 0.9);
-    --page-bg-url: url("");
-    --page-bg-style: linear-gradient(var(--page-bg-color), var(--page-bg-color)), var(--page-bg-url) !important;
-
-    --blue-bg: rgba(0, 95, 151, .5);
-    --blue-hl: rgba(132, 196, 234, .3);
-    --yellow-bg: rgba(255, 255, 0, 0.4);
-    --green-bg: rgba(164, 255, 187, .3);
-    --light-blue: #00b1ff;
-    --transparent: rgba(0,0,0,0);
-    
+    /* Root Variables */
     --small-text: 14px;
     --medium-text: 14px;
+
+    /* ---------- */
+    /* Light Mode */
+    /* ---------- */
+    --main-contrast: #000000;
+    --low-contrast: rgba(75, 75, 75, 1);
+    --very-low-contrast: rgba(177, 172, 172, .9);
+    --link-color: #005f97;
+    --emphasis-blue: #00b1ff;
+	
+    --low-contrast-bg: rgba(120, 120, 120, .3); 
+    --passive-select: rgba(0, 95, 151, .5);
+    --active-select: rgba(132, 196, 234, .3);
+    --search-select: rgba(255, 255, 0, 0.4);
+    --transparent: rgba(0,0,0,0);
     
+    /* Document Background */
+    --page-bg-color: rgba(255,255,255, 0.9);
+    --page-bg-url: url("");
+    --page-bg-style: linear-gradient(var(--page-bg-color), 
+        var(--page-bg-color)), var(--page-bg-url) !important;
+
+    /* Page Background */
     --app-bg-color-1: rgba(0, 0, 0, .1);
     --app-bg-color-2: rgba(0, 0, 0, .1);
     --app-bg-url: url("");
-    /* https://brandonsie.github.io/docs/Boston_Bigmap_Crop_Contrast.jpg */
-    --app-bg-style: linear-gradient(var(--app-bg-color-1), var(--app-bg-color-2)), var(--app-bg-url) !important;
-    
+    --app-bg-style: linear-gradient(var(--app-bg-color-1), 
+        var(--app-bg-color-2)), var(--app-bg-url) !important;
+
+    /* Ctrl+L Label Colors */
+    --label1: #f88;
+    --label2: #f6f9a6;
+    --label3: #8fc599;
+    --label4: rgb(69, 85, 132);
+    --label5: rgb(106, 131, 202);
+    --label6: rgb(224, 230, 240);
 }
 
+    
+/* ---------- */
+/* Dark Mode  */
+/* ---------- */
+[data-theme="dark"] {
+    --main-contrast: #fff; /* main text color */
+    --low-contrast: rgb(195, 195, 195);
+    --very-low-contrast: rgba(118, 116, 116, .9);
+    --link-color: #91caec; /* Links */
+    --emphasis-blue: #00b1ff; /* Sidebar and App header icons on hover */
 
+    --low-contrast-bg: rgba(120, 120, 120, .3); /* sidebar doc bookmarks bg  */
+    --passive-select: rgba(0, 95, 151, .5); /* sidebar selection */
+    --active-select: rgba(132, 196, 234, .3);
+    --search-select: rgba(255, 255, 0, 0.4);
+    --transparent: rgba(0,0,0,0);
+    
+    /* Document Background */
+    --page-bg-color: rgba(57, 58, 71, .9);
+    --page-bg-url: url("");
+    --page-bg-style: linear-gradient(var(--page-bg-color), 
+        var(--page-bg-color)), var(--page-bg-url) !important;
+
+    /* Page Background */
+    --app-bg-color-1: rgb(25, 25, 25);
+    --app-bg-color-2: rgb(68, 68, 68);
+    --app-bg-url: url("");
+    --app-bg-style: linear-gradient(var(--app-bg-color-1), 
+        var(--app-bg-color-2)), var(--app-bg-url) !important;
+    
+    /* Ctrl+L Label Colors */
+    --label1: #f88;
+    --label2: #f6f9a6;
+    --label3: #8fc599;
+    --label4: rgb(69, 85, 132);
+    --label5: rgb(106, 131, 202);
+    --label6: rgb(85, 87, 92);
+}
 
 /* ======================================== */
 /* Header & Borders */
 .AppHeader {
-    color: var(--main-blue);
+    color: var(--link-color);
     background-color: var(--transparent);
-    box-shadow: 0 1px 3px var(--main-black);
+    box-shadow: 0 1px 3px var(--main-contrast);
 }
 
 .AppHeader-icon {
-    color: var(--main-blue);
+    color: var(--link-color);
 }
 
 .AppHeader-icon:hover {
-    color: var(--light-blue);
-    border: 1px solid var(--main-black);
+    color: var(--emphasis-blue);
+    border: 1px solid var(--main-contrast);
 }
 
     
 /* ======================================== */
 /* Page & Background */
-
-    
-    
 .AppContainer {
-    background: linear-gradient(var(--main-grey), var(--main-grey)) !important;
-/*   
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.5)), url("") !important;	    
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important; 
-    background-size: cover !important;
-*/
+    background: linear-gradient(var(--low-contrast-bg), var(--low-contrast-bg)) !important;
 }
 
 /* Document Color & Transparency */ 
-.is-desktop .AppContainer.is-borderShowing .Document, .read-only-doc, .AppContainer.is-borderShowing .Document{
+.is-desktop .AppContainer.is-borderShowing .Document, 
+    .read-only-doc, .AppContainer.is-borderShowing .Document{
     background: linear-gradient(var(--page-bg-color), var(--page-bg-color)) !important;
-    border-color: var(--main-black);
+    border-color: var(--main-contrast);
     min-height: 10px;
 }
 
-.DocumentTools-icon {
-    color: var(--main-grey);
+/* Search View Icon Document */ .DocumentTools-icon {
+    color: var(--low-contrast);
 }
 
 .DocumentTools-icon:hover {
-    color: var(--main-black);
+    color: var(--main-contrast);
 }
     
 .DocumentTools-overlay {
     background: linear-gradient(var(--transparent), var(--transparent)) !important; 
-    box-shadow: 0 0 0px 0px var(--main-black);
+    box-shadow: 0 0 0px 0px var(--main-contrast);
 }
-
-    
     
 /* make article view like list view without bullets. credit https://talk.dynalist.io/t/miscellaneous-csss/5817*/
 .is-compactDensity.is-article-view .Node-self,
@@ -114,75 +148,64 @@
 /* ======================================== */
 /* Sidebar */
 
-.is-desktop .Pane-header,
-.is-desktop .popup-message-banner {
-    /* Header Bar */
-    color: var(--main-black);
+/* Header Bar */ .is-desktop .Pane-header, .is-desktop .popup-message-banner { 
+    color: var(--main-contrast);
     background: var(--page-bg-color);
 }
     
-.is-desktop .Pane-headerToolbarItem {
-    /* Header Icons */
-    color: var(--main-black);
+/* Header Icons */ .is-desktop .Pane-headerToolbarItem { 
+    color: var(--main-contrast);
 }
 
-.is-desktop .Pane-headerToolbarItem:hover {
-    /* Header Icons Hover */
-    color: var(--light-blue);
+/* Header Icons Hover */ .is-desktop .Pane-headerToolbarItem:hover {
+    color: var(--emphasis-blue);
 }
 
-    
-.is-desktop .LeftPaneSplitter:after {
-    /* Right Edge of Sidebar */
-    border-right: 1px solid var(--main-black);
+/* Right Edge of Sidebar */ .is-desktop .LeftPaneSplitter:after {
+    border-right: 1px solid var(--main-contrast);
 }
 
-.is-desktop .LeftPaneContainer-nav {
-    
-    /* Left Column of Sidebar w/ Icons */
+ /* Left Column of Sidebar w/ Icons */ .is-desktop .LeftPaneContainer-nav {
     background: var(--transparent);
 }
 
-.is-desktop .LeftPaneContainer-navItem.is-active,
+/* Selected Sidebar Icon */ .is-desktop .LeftPaneContainer-navItem.is-active,
 .is-desktop .LeftPaneContainer-navItem:hover { 
-    /* Selected Sidebar Icon */
     background: var(--page-bg-color);
 }
 
-.is-desktop .LeftPaneContainer-navItem {
-    /* Non-Selected Sidebar Icon */
-    background: var(--main-grey);
-    color: var(--main-black);    
+/* Non-Selected Sidebar Icon */ .is-desktop .LeftPaneContainer-navItem {
+    background: var(--low-contrast-bg);
+    color: var(--main-contrast);    
 }
 
-.Pane {
-    /* Sidebar Text Pane */
+/* Sidebar Text Pane */ .Pane {
     background: linear-gradient(var(--page-bg-color), var(--page-bg-color)) !important;
     font-size: var(--small-text);
 }
+
+/* Sidebar Text */ .pane-item-title{
+    color: var(--very-low-contrast);
+}
     
-.pane-item-icon {
-    /* Folder & Document Pane Icons */
-    color: var(--main-black);
+/* Folder & Document Pane Icons */ .pane-item-icon {
+    color: var(--very-low-contrast);
     font-size: var(--small-text);
     line-height: var(--small-text);
     margin-left: -25px;
 }
 
 .pane-item-icon.shared {
-    color: var(--main-blue);
+    color: var(--link-color);
 }
 
-.LeftPaneContainer{
-    /* Container of Sidebar Text Pane */ 
+/* Container of Sidebar Text Pane */  .LeftPaneContainer{
     background: linear-gradient(var(--transparent), var(--transparent)) !important; 
 }
     
-.pane-item.DocumentItem.is-open > .pane-item-header {
-    /* Selected Item in Pane */
-    background-color: var(--blue-bg);
+/* Selected Item in Pane */ .pane-item.DocumentItem.is-open > .pane-item-header {
+    background-color: var(--passive-select);
 }
-
     
 /* Fades all the sidebars and icons until you mouse over them */
 /*
@@ -219,6 +242,14 @@
 }
 */
     
+    /* Ctrl F search window */
+    
+    .js-prevent-default,
+    .mod-filters , .js-perform-global-search , .js-perform-flat-search,
+    .view-filter-option, .view-filter-option-choices, .tooltip{
+        color: #fff !important;
+    }
+    
 .Node {
     /* Body Text */
 	/*
@@ -249,17 +280,18 @@
     
 body { 
     /* Main Body */
-    color: var(--main-black);
+    color: var(--main-contrast);
 }
 
 .search-match {
     /* ctrl+f search result */
-    background: var(--yellow-bg);
+	color: var(--main-contrast) !important;
+    background: var(--search-select);
 }
     
 .node-tag {
     /* Tags */
-	color: var(--main-blue);   
+	color: var(--link-color);   
     font-size: var(--medium-text);
 }
 
@@ -296,50 +328,50 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
 
 .set-color-label[data-color="1"], .Node-contentContainer.mod-color-label-1 {
     /* Colored Label */
-    background-color: #f88;
+    background-color: var(--label1);
 }
 .set-color-label[data-color="2"], .Node-contentContainer.mod-color-label-2 {
     /* Colored Label */
-    background-color: #f6f9a6;
+    background-color: var(--label2);
 }
 .set-color-label[data-color="3"], .Node-contentContainer.mod-color-label-3 {
     /* Colored Label */
-    background-color: #8fc599;
+    background-color: var(--label3);
 }
 .set-color-label[data-color="4"], .Node-contentContainer.mod-color-label-4 {
-    background-color: rgb(69, 85, 132);
+    background-color: var(--label4);
     color: #fff;
 }
 .set-color-label[data-color="5"], .Node-contentContainer.mod-color-label-5 {
     /* Colored Label */
-    background-color: rgb(106, 131, 202);
+    background-color: var(--label5);
     color: #fff;
 }
 .set-color-label[data-color="6"], .Node-contentContainer.mod-color-label-6 {
     /* Colored Label */
-    background-color: rgb(224, 230, 240);
+    background-color: var(--label6);
 }
 
 .Node-bullet:before {
     /* Bullet Points */
-    color: var(--main-black);
+    color: var(--main-contrast);
     font-size: 13px;
 }
 
 .is-collapsed>.Node-bullet:before {
     /* Collapsed Bullets */
- 	color: var(--main-blue);   
+ 	color: var(--link-color);   
 }
 
 .AppContainer.is-using-bullet-to-zoom .Node-bullet:hover:before {
     /* Hovered Bullet */
-    background-color: var(--main-grey);
+    background-color: var(--low-contrast);
 }
     
 
 a, .node-inline-item  {
     /* Links & Internal Links */
-	color: var(--main-blue);   
+	color: var(--link-color);   
     background-color: var(--transparent);
     border: none;
     display: inline;
@@ -363,8 +395,8 @@ a, .node-inline-item  {
 .Node-content:focus,.Node-renderedContent:focus,
 .Node-note:focus,.Node-renderedNote:focus {
     /* higher contrast active item */
-    color: var(--main-black);
-    background: var(--blue-hl);
+    color: var(--main-contrast);
+    background: var(--active-select);
 }
 
 
@@ -377,22 +409,22 @@ a, .node-inline-item  {
     
 .popover > .node-mover-title, .Suggestions-item span, .is-checked .node-bold span {
     /* Move Item Menu Text */
-    color: var(--main-blue);
+    color: var(--link-color);
     text-decoration-line: none !important;
 }
 .popover{
-    background-color: var(--thick-grey);
+    background-color: var(--very-low-contrast);
 }
 
-    .is-checked span {
-        /* Completed Items */
-        color: var(--dark-grey);
-    }
+.is-checked span {
+    /* Completed Items */
+    color: var(--low-contrast) !important;
+}
     
-    .is-checked .needsclick{
-        /* Edit-Mode clicked items */
-        color: var(--main-black) !important;
-    }
+.is-checked .needsclick{
+    /* Edit-Mode clicked items */
+    color: var(--main-contrast) !important;
+}
     
 .AppContainer{
     background: var(--app-bg-style) !important;
@@ -407,6 +439,13 @@ a, .node-inline-item  {
     /* vertical bars */
     border-left: 1px solid #000;
 }
+    
+    
+    /* ===============*/
+    /* Settings */
+    .loadable-form{
+        background-color: var(--page-bg-color);
+    }
 
 /* ======================================== */
 /* Scrollbar */
@@ -415,11 +454,13 @@ a, .node-inline-item  {
     background-color: var(--transparent);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-blue);
+    background-color: var(--link-color);
 }
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(--main-blue);
+    background-color: var(--link-color);
 }
     */
     
-} /* end style */
+
+}
+/* end style */
