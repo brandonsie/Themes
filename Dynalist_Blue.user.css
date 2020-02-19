@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.10
+@version        1.0.11
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://raw.githubusercontent.com/brandonsie/Themes/master/Dynalist_Blue.user.css
@@ -215,8 +215,6 @@
 
 /* Sidebar Text */ .pane-item-title{
     color: var(--low-contrast);
-          position:absolute;
-
 }
 
 /* Selected Sidebar Text */.is-open .pane-item-title{
