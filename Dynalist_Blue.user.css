@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.12
+@version        1.0.13
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://raw.githubusercontent.com/brandonsie/Themes/master/Dynalist_Blue.user.css
@@ -11,10 +11,10 @@
 
 /* text selection */
 ::selection {
-  background: rgba(0, 55, 102, 0.99);
+  background: var(--very-low-contrast);
 }
 ::-moz-selection {
-  background: rgba(0, 55, 102, 0.99);
+  background: var(--very-low-contrast);
 }
 
     /* move item menu emphasis */
