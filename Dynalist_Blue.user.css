@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dynalist_Blue
 @namespace      github.com/brandonsie/Themes
-@version        1.0.11
+@version        1.0.12
 @description    Dynalist custom CSS for use with default theme.
 @author         Brandon Sie
 @updateURL      https://raw.githubusercontent.com/brandonsie/Themes/master/Dynalist_Blue.user.css
@@ -359,6 +359,10 @@ a[title="Filter #p2"]::before, a[title="Filter #P2"]::before {
     content: " ";
 }
 
+    .js-prevent-default{
+        /* tag link text e.g. #p1 */
+        color: var(--main-contrast) !important;
+    }
     
 /* Colored Labels */
 
